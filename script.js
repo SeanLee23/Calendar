@@ -7,7 +7,7 @@ const renderCalendar = () => {
     
     const lastDay = new Date(date.getFullYear(),date.getMonth()+1, 0).getDate();
     
-    const prevLastDay = new Date(date.getFullerYear(), date.getMonth(),0).getDate();
+    const prevLastDay = new Date(date.getFullYear(), date.getMonth(),0).getDate();
     
     const firstDayIndex = date.getDay();
     
@@ -30,7 +30,7 @@ const renderCalendar = () => {
         "December"
     ];
     
-    document.querySelector('.date.h1').innerHTML
+    document.getElementById('month').innerHTML
     = months[date.getMonth()];
     
     document.querySelector(".date p").innerHTML
@@ -50,7 +50,7 @@ const renderCalendar = () => {
         }
     }
     
-    for(letj = 1;k <= nextDays; j++){
+    for(let j = 1;j <= nextDays; j++){
         days += `<div class="next-date">${j}</div>`;
         monthDays.innerHTML = days;
     } 
